@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurelius Automation · Boutique AI and Technology Consultancy</title>
+<meta name="description" content="Aurelius Automation is a full-service AI and automation agency serving nonprofits, mission-driven organizations, and the businesses and leaders that support them. We identify the operational gaps slowing your team down, then build and deploy the AI agents, integrations, and automated workflows that eliminate them.">
+<meta name="theme-color" content="#1a1d23">
+
+<meta property="og:title" content="Aurelius Automation · Boutique AI and Technology Consultancy">
+<meta property="og:description" content="We integrate intelligence so your team can focus on impact. Nonprofits first. Mission-driven businesses always.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aureliusautomation.io">
+<!-- TODO: replace with a real 1200x630 OG card -->
+<meta property="og:image" content="https://aureliusautomation.io/og.png">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          charcoal: '#1a1d23',
+          'warm-white': '#e8e6e1',
+          'muted-gray': '#a8a49c',
+          'deep-green': '#1f4e3d',
+        },
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          serif: ['Georgia', '"Times New Roman"', 'serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #1a1d23; color: #e8e6e1; font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .wordmark { letter-spacing: 0.22em; }
+  .eyebrow { letter-spacing: 0.18em; font-size: 11px; text-transform: uppercase; color: #a8a49c; font-weight: 500; }
+  .section-title { font-family: Georgia, "Times New Roman", serif; font-size: clamp(28px, 4vw, 42px); line-height: 1.15; }
+  .section-title::after { content: ""; display: block; width: 48px; height: 2px; background: #1f4e3d; margin-top: 16px; }
+  .card { background: rgba(255,255,255,0.025); border: 1px solid rgba(232,230,225,0.08); border-radius: 10px; padding: 24px; transition: border-color .2s, background .2s; }
+  .card:hover { border-color: rgba(245,158,11,0.35); background: rgba(255,255,255,0.04); }
+  .card h3 { font-weight: 600; color: #e8e6e1; font-size: 15px; margin-bottom: 8px; }
+  .card p { color: #a8a49c; font-size: 14px; line-height: 1.6; }
+  .btn-primary { background: #f59e0b; color: #1a1d23; font-weight: 600; padding: 12px 22px; border-radius: 8px; display: inline-block; transition: background .2s, transform .2s; }
+  .btn-primary:hover { background: #fbb33b; transform: translateY(-1px); }
+  .btn-secondary { border: 1px solid rgba(232,230,225,0.25); color: #e8e6e1; font-weight: 500; padding: 12px 22px; border-radius: 8px; display: inline-block; transition: border-color .2s, background .2s; }
+  .btn-secondary:hover { border-color: rgba(245,158,11,0.6); background: rgba(245,158,11,0.05); }
+  .step-numeral { width: 40px; height: 40px; border-radius: 999px; background: rgba(245,158,11,0.12); border: 1px solid #f59e0b; color: #f59e0b; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  input, textarea { background: rgba(255,255,255,0.03); border: 1px solid rgba(232,230,225,0.12); border-radius: 8px; padding: 10px 12px; color: #e8e6e1; font-family: inherit; font-size: 14px; width: 100%; transition: border-color .2s; }
+  input:focus, textarea:focus { outline: none; border-color: #f59e0b; }
+  label { display: block; font-size: 12px; color: #a8a49c; margin-bottom: 6px; }
+  a.inline-link { color: #f59e0b; text-decoration: none; border-bottom: 1px solid rgba(245,158,11,0.4); }
+  a.inline-link:hover { border-bottom-color: #f59e0b; }
+  .insula-card { background: rgba(245,158,11,0.04); border: 1px solid rgba(245,158,11,0.35); border-radius: 12px; padding: 32px; }
+  .quote-block { border-top: 1px solid rgba(245,158,11,0.45); border-bottom: 1px solid rgba(245,158,11,0.45); padding: 28px 0; text-align: center; }
+</style>
+</head>
+
+<body>
+
+<!-- Logo mark, reused inline where needed -->
+<template id="flow-mark-template">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M 8 13 Q 16 5 24 13" stroke="#e8e6e1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 8 19 Q 16 27 24 19" stroke="#e8e6e1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="8" cy="16" r="3" fill="#e8e6e1"/>
+    <circle cx="24" cy="16" r="3" fill="#f59e0b"/>
+  </svg>
+</template>
+
+<header class="max-w-6xl mx-auto px-6 pt-10 pb-4 flex items-center gap-4">
+  <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M 8 13 Q 16 5 24 13" stroke="#e8e6e1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 8 19 Q 16 27 24 19" stroke="#e8e6e1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="8" cy="16" r="3" fill="#e8e6e1"/>
+    <circle cx="24" cy="16" r="3" fill="#f59e0b"/>
+  </svg>
+  <div class="wordmark font-serif text-warm-white text-lg sm:text-xl" aria-label="Aurelius Automation">AURELIUS AUTOMATION</div>
+</header>
+
+<main>
+
+<!-- 1. HERO -->
+<section class="max-w-6xl mx-auto px-6 pt-12 pb-24">
+  <p class="eyebrow">Boutique AI and technology consultancy</p>
+  <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mt-5 text-warm-white">
+    We integrate intelligence so your team can focus on impact.
+  </h1>
+  <p class="mt-6 max-w-3xl text-lg text-muted-gray leading-relaxed">
+    Aurelius Automation is a full-service AI and automation agency serving nonprofits, mission-driven organizations, and the businesses and leaders that support them. We identify the operational gaps slowing your team down, then build and deploy the AI agents, integrations, and automated workflows that eliminate them. Completely, and built to last.
+  </p>
+  <div class="mt-10 flex flex-wrap gap-4">
+    <a href="#contact" class="btn-primary">Book a call</a>
+    <a href="#how-we-work" class="btn-secondary">See how we work</a>
+  </div>
+</section>
+
+<!-- 2. WHO WE SERVE -->
+<section id="who-we-serve" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">Who we serve</p>
+  <h2 class="section-title mt-4 text-warm-white">Nonprofits first. Mission-driven businesses always.</h2>
+  <p class="mt-8 max-w-3xl text-muted-gray leading-relaxed">
+    We founded Aurelius in Chicago to serve nonprofits and the organizations that keep mission-driven work running. Our clients include nonprofits, the greater real estate ecosystem, law firms, and healthcare organizations.
+  </p>
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div class="card">
+      <h3>Nonprofits</h3>
+      <p>Donor CRMs, grant tracking, volunteer scheduling. Your mission, not your data entry.</p>
+    </div>
+    <div class="card">
+      <h3>Greater real estate ecosystem</h3>
+      <p>Brokerages, property managers, builders, and developers. Tenant communication, maintenance triage, payment collection, RFI management. Portfolio operations without the portfolio ops team.</p>
+    </div>
+    <div class="card">
+      <h3>Law firms</h3>
+      <p>Intake automation, document review, billing reconciliation. Billable hours back on client work.</p>
+    </div>
+    <div class="card">
+      <h3>Healthcare</h3>
+      <p>Your clinicians focus on patients while we handle the administrative load.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHAT WE DO -->
+<section id="services" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">Our services</p>
+  <h2 class="section-title mt-4 text-warm-white">Nine practice areas. One principle: your team's time is too valuable to waste.</h2>
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="card">
+      <h3>CRM integrations</h3>
+      <p>HubSpot, Salesforce, Raiser's Edge NXT, Blackbaud. Connected, synchronized, and reliable.</p>
+    </div>
+    <div class="card">
+      <h3>Email automation</h3>
+      <p>Inbound email triage, classification, and routing. Outbound platforms (Mailchimp, Constant Contact) configured for intelligent, timely outreach.</p>
+    </div>
+    <div class="card">
+      <h3>Workflow automation</h3>
+      <p>Custom automations that eliminate manual, repetitive tasks and keep your team focused on higher-value work.</p>
+    </div>
+    <div class="card">
+      <h3>AI agents</h3>
+      <p>Purpose-built agents that handle intake, triage, routing, and follow-up autonomously across your systems.</p>
+    </div>
+    <div class="card">
+      <h3>Data cleanup</h3>
+      <p>Audit, deduplicate, and normalize your records before any migration or integration.</p>
+    </div>
+    <div class="card">
+      <h3>Communication systems</h3>
+      <p>End-to-end client and stakeholder communication pipelines. Built right the first time.</p>
+    </div>
+    <div class="card">
+      <h3>Intelligent document processing</h3>
+      <p>AI-powered extraction and classification of forms, reports, and records. No manual entry.</p>
+    </div>
+    <div class="card">
+      <h3>Reporting and dashboards</h3>
+      <p>Clear visibility into pipeline activity, team performance, and operational health for leadership.</p>
+    </div>
+    <div class="card">
+      <h3>AI-powered analytics</h3>
+      <p>Predictive insights on client behavior, engagement trends, and operational gaps, surfaced automatically.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. HOW WE WORK -->
+<section id="how-we-work" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">How we work</p>
+  <h2 class="section-title mt-4 text-warm-white">Five steps. 30 to 60 day implementation depending on your needs.</h2>
+  <ol class="mt-12 space-y-8 max-w-3xl">
+    <li class="flex gap-5">
+      <div class="step-numeral">1</div>
+      <div>
+        <h3 class="font-semibold text-warm-white text-base">Discovery</h3>
+        <p class="text-muted-gray mt-1 leading-relaxed">We learn your systems, your team, and your goals before recommending anything.</p>
+      </div>
+    </li>
+    <li class="flex gap-5">
+      <div class="step-numeral">2</div>
+      <div>
+        <h3 class="font-semibold text-warm-white text-base">Data audit</h3>
+        <p class="text-muted-gray mt-1 leading-relaxed">We assess data health and document every gap before touching anything.</p>
+      </div>
+    </li>
+    <li class="flex gap-5">
+      <div class="step-numeral">3</div>
+      <div>
+        <h3 class="font-semibold text-warm-white text-base">Build</h3>
+        <p class="text-muted-gray mt-1 leading-relaxed">We configure integrations and AI agents with you reviewing at every milestone.</p>
+      </div>
+    </li>
+    <li class="flex gap-5">
+      <div class="step-numeral">4</div>
+      <div>
+        <h3 class="font-semibold text-warm-white text-base">Test</h3>
+        <p class="text-muted-gray mt-1 leading-relaxed">End-to-end testing with real data before anything goes live.</p>
+      </div>
+    </li>
+    <li class="flex gap-5">
+      <div class="step-numeral">5</div>
+      <div>
+        <h3 class="font-semibold text-warm-white text-base">Train and hand off</h3>
+        <p class="text-muted-gray mt-1 leading-relaxed">We train your team and deliver full documentation so you own what we built. Teams who want ongoing partnership can stay on with our white-glove managed service retainer.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- 5. WHY AURELIUS -->
+<section id="why" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">Why Aurelius Automation</p>
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div class="card">
+      <h3>Mission-aligned</h3>
+      <p>We prioritize nonprofits and mission-driven work. This is not a side practice.</p>
+    </div>
+    <div class="card">
+      <h3>Boutique and accountable</h3>
+      <p>You work directly with us. No handoffs, no junior staff, no surprises.</p>
+    </div>
+    <div class="card">
+      <h3>Built to last</h3>
+      <p>Every workflow is documented. Your team can manage it independently when we're done.</p>
+    </div>
+    <div class="card">
+      <h3>Chicago roots</h3>
+      <p>We're local. We care about the organizations changing this city and this country.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. RECENT WORK -->
+<section id="work" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">Recent work</p>
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+    <div class="card">
+      <h3>Peak Project</h3>
+      <p>Raiser's Edge to Mailchimp donor messaging bridge. Replaced 15 hours per week of manual list exports with a nightly automated sync. Launched April 2026.</p>
+    </div>
+    <div class="card">
+      <h3>Healthcare DME</h3>
+      <p>AI triage agent for insurance billing prep across email and digital fax intake. In discovery.</p>
+    </div>
+    <div class="card">
+      <h3>Rogers Park Builders Group</h3>
+      <p>Autopilot workflows for Chicago's builder community. Rollout Q2 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. INSULA -->
+<section id="products" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">Products</p>
+  <div class="insula-card mt-6">
+    <h2 class="font-serif text-4xl sm:text-5xl text-warm-white">Insula</h2>
+    <p class="mt-3 text-[#f59e0b] font-medium">AI-native property management software, powered by Aurelius Automation.</p>
+    <p class="mt-6 text-muted-gray leading-relaxed max-w-3xl">
+      Insula is a standalone SaaS product built by Aurelius Automation for Chicago landlords. It replaces the sprawl of spreadsheets, text threads, and legacy property management tools with an AI-native platform that handles leads, maintenance triage, vendor coordination, renewals, listings, and rent collection. Same automation principles. Purpose-built for residential real estate.
+    </p>
+    <div class="mt-8">
+      <a href="https://insulahomes.io" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
+        Visit insulahomes.io
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 17L17 7"/>
+          <path d="M8 7h9v9"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-6 py-20">
+  <p class="eyebrow">Book a call</p>
+  <h2 class="section-title mt-4 text-warm-white">Tell us about the work you wish would automate itself.</h2>
+
+  <form id="contact-form" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl" novalidate>
+    <div>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required autocomplete="name">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+    </div>
+    <div class="md:col-span-2">
+      <label for="company">Company</label>
+      <input id="company" name="company" type="text" autocomplete="organization">
+    </div>
+    <div class="md:col-span-2">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div class="md:col-span-2 flex flex-wrap items-center gap-4">
+      <button type="submit" class="btn-primary">Send</button>
+      <p id="form-status" class="text-sm text-muted-gray" aria-live="polite"></p>
+    </div>
+  </form>
+
+  <p class="mt-10 text-sm text-muted-gray">
+    Prefer direct?
+    <a href="mailto:hello@aureliusautomation.io" class="inline-link">hello@aureliusautomation.io</a>
+    ·
+    <a href="tel:+16306052778" class="inline-link">630-605-2778</a>
+  </p>
+</section>
+
+<!-- 9. QUOTE -->
+<section class="max-w-3xl mx-auto px-6 py-16">
+  <div class="quote-block">
+    <p class="font-serif italic text-xl sm:text-2xl text-warm-white leading-relaxed">
+      "Everything is interwoven, and the web is holy; none of its parts are unconnected."
+    </p>
+    <p class="mt-4 text-sm text-muted-gray">Marcus Aurelius, Meditations, Book VII</p>
+  </div>
+</section>
+
+</main>
+
+<!-- 10. FOOTER -->
+<footer class="max-w-6xl mx-auto px-6 py-12 border-t border-[rgba(232,230,225,0.08)]">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <svg viewBox="0 0 32 32" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 8 13 Q 16 5 24 13" stroke="#e8e6e1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M 8 19 Q 16 27 24 19" stroke="#e8e6e1" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="8" cy="16" r="3" fill="#e8e6e1"/>
+        <circle cx="24" cy="16" r="3" fill="#f59e0b"/>
+      </svg>
+      <p class="text-sm text-muted-gray">Aurelius Automation · Chicago · © 2026</p>
+    </div>
+    <div class="text-sm text-muted-gray flex flex-wrap gap-x-5 gap-y-2">
+      <a href="mailto:hello@aureliusautomation.io" class="hover:text-warm-white transition-colors">hello@aureliusautomation.io</a>
+      <a href="tel:+16306052778" class="hover:text-warm-white transition-colors">630-605-2778</a>
+      <a href="https://www.linkedin.com/in/mohanaddaher" target="_blank" rel="noopener" class="hover:text-warm-white transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Contact form submission.
+  // TODO: wire up to a real endpoint. Options: serverless function (/api/contact),
+  // Formspree, or a small Resend-backed handler. For now this POSTs optimistically
+  // and always shows the success state so the UI is ready before the backend is.
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Sending...';
+    status.style.color = '#a8a49c';
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+    } catch (_err) {
+      // Silently ignore network failure until endpoint is wired.
+    }
+
+    form.reset();
+    status.textContent = "Thanks, we'll be in touch within 24 hours.";
+    status.style.color = '#f59e0b';
+  });
+</script>
+
+</body>
+</html>
