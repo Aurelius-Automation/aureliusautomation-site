@@ -1,0 +1,4 @@
+# Cloudflare Pages routing.
+# Status 200 = rewrite (URL stays clean as /privacy, content served from /privacy.html).
+# /privacy.html still works directly because the file exists.
+/privacy   /privacy.html   200
